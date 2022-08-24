@@ -1,0 +1,32 @@
+<p-menubar [model]="items" styleClass="ui-menubar">
+  <ng-template pTemplate="start">
+    <div class="hidden sm:inline-flex">
+      <img
+        src="assets/img/app-development.png"
+        height="40"
+        class="mr-2"
+        alt="home"
+      />
+    </div>
+  </ng-template>
+
+  <!-- <input type="text" pInputText placeholder="Search" /> -->
+  <button
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-ellipsis-v"
+    class="p-button p-button-text p-button-plain"
+    [label]="title"
+    iconPos="right"
+    aria-label="off"
+    (click)="menu.toggle($event)"
+  ></button>
+</p-menubar>
+<p-slideMenu
+  #menu
+  [model]="options"
+  [popup]="true"
+  [viewportHeight]="400"
+></p-slideMenu>
+<router-outlet></router-outlet>
