@@ -59,6 +59,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
  * Application components
  */
 import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
@@ -115,8 +116,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     ToggleButtonModule,
     OverlayPanelModule,
   ],
-  declarations: [NavigationComponent],
+  declarations: [NavigationComponent, HomeComponent],
   providers: [ConfirmationService],
-  exports: [NavigationComponent],
+  exports: [NavigationComponent, HomeComponent],
 })
 export class PagesModule {}

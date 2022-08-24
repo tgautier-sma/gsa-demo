@@ -1,3 +1,30 @@
-<p>
-home works!
-</p>
+<p-toast></p-toast>
+<p-panel header="Bienvenue!" [toggleable]="true">
+  <ng-template pTemplate="icons">
+    <p-menu #menu id="config_menu" [model]="items" [popup]="true"></p-menu>
+    <button
+      pButton
+      class="p-panel-header-icon p-link"
+      icon="pi pi-cog"
+      (click)="menu.toggle($event)"
+      aria-label="Menu"
+    ></button>
+  </ng-template>
+
+  <div class="flex flex-column justify-content-center flex-wrap">
+    <div class="flex align-content-start justify-content-center m-4">
+      Application de démonstration des composants de présentation de données
+      dans une application, à partir du framework PrimeNg.
+    </div>
+    <div class="flex align-items-center justify-content-center">
+      <img src="assets/img/primeng-logo.png" alt="Image" style="width:100px" />
+    </div>
+    <div class="m-3">
+      Cliquez sur&nbsp;<i class="pi pi-cog"></i>&nbsp;pour faire les premiers de
+      test de messages et de navigation.
+    </div>
+    <div class="sm:hidden m-3">
+      Cliquez sur&nbsp;<i class="pi pi-bars"></i>&nbsp;pour accéder au menu.
+    </div>
+  </div>
+</p-panel>
